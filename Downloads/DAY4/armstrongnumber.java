@@ -24,8 +24,4 @@ public class armstrongnumber {
 
         sc.close();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b4fafb579b2abd3fbe47c5f01aa87a2171013919

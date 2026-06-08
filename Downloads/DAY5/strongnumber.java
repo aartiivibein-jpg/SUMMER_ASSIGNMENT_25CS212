@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class armstrongnumber {
+public class strongnumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -8,24 +8,26 @@ public class armstrongnumber {
         int num = sc.nextInt();
 
         int temp = num;
-        int sum = 0, rem;
+        int sum = 0;
 
         while (temp > 0) {
-            rem = temp % 10;
-            sum = sum + (rem * rem * rem);
+            int rem = temp % 10;
+            int fact = 1;
+
+            for (int i = 1; i <= rem; i++) {
+                fact = fact * i;
+            }
+
+            sum = sum + fact;
             temp = temp / 10;
         }
 
         if (sum == num) {
-            System.out.println("Armstrong Number");
+            System.out.println("Strong Number");
         } else {
-            System.out.println("Not an Armstrong Number");
+            System.out.println("Not a Strong Number");
         }
 
         sc.close();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b4fafb579b2abd3fbe47c5f01aa87a2171013919
